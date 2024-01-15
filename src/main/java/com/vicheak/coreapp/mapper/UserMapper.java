@@ -17,4 +17,13 @@ public class UserMapper {
         return user;
     }
 
+    public UserDto toUserDto(User user) {
+        return UserDto.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .gender(user.getGender())
+                .birthDate(user.getBirthDate().toString())
+                .build();
+    }
+
 }

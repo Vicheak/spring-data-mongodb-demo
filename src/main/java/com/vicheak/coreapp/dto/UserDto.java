@@ -1,8 +1,11 @@
 package com.vicheak.coreapp.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import lombok.Builder;
 
-public record UserDto(@NotBlank
+@Builder
+public record UserDto(String id,
+                      @NotBlank
                       String username,
                       @NotBlank
                       String gender,
